@@ -22,3 +22,12 @@
     Si el último parámetro de una función es un tipo de función, puedes usar la sintaxis lambda al final para mover la expresión lambda después del último paréntesis cuando llamas a una función.
     Las funciones de orden superior son funciones que toman otras funciones como parámetros o muestran una función.
     La función repeat() es una función de orden superior que funciona de manera similar a un bucle for.
+
+## FillInTheBlankQuestion
+
+    Cuando una clase se define como una clase de datos, se implementan los siguientes métodos:
+    equals()
+    hashCode() (verás este método cuando trabajes con ciertos tipos de colecciones)
+    toString()
+    componentN(): component1(), component2(), etc.
+    copy()
