@@ -54,3 +54,9 @@ object StudentProgress {
 var total: Int = 10
 var answered: Int = 3
 }
+
+
+Objeto Complementario
+Las clases y los objetos de Kotlin se pueden definir dentro de otros tipos y pueden ser una excelente manera de organizar tu código. 
+Puedes definir un objeto singleton dentro de otra clase por medio de un objeto complementario. Un objeto complementario te permite acceder 
+a sus propiedades y métodos desde adentro de la clase, si las propiedades y los métodos del objeto pertenecen a esa clase, lo que permite una sintaxis más concisa.
