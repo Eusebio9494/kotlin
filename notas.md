@@ -1,4 +1,4 @@
-## Main.kt
+# Main.kt
     OOP consta de cuatro principios principales: encapsulamiento, abstracción, herencia y polimorfismo.
     Las clases se definen con la palabra clave class y contienen propiedades y métodos.
     Las propiedades son similares a las variables, excepto que pueden tener métodos get y set personalizados.
@@ -10,7 +10,7 @@
     Los modificadores de visibilidad son importantes para lograr el encapsulamiento.
     Kotlin ofrece cuatro modificadores de visibilidad: public, private, protected y internal.
     Un delegado de propiedad te permite reutilizar el código get y set en varias clases.
-## Lambda.Kt
+# Lambda.Kt
 
     Las funciones en Kotlin son construcciones de primer nivel y se pueden tratar como tipos de datos.
     Las expresiones lambda proporcionan una sintaxis abreviada para escribir funciones.
@@ -23,7 +23,7 @@
     Las funciones de orden superior son funciones que toman otras funciones como parámetros o muestran una función.
     La función repeat() es una función de orden superior que funciona de manera similar a un bucle for.
 
-## FillInTheBlankQuestion
+# FillInTheBlankQuestion
 
     Cuando una clase se define como una clase de datos, se implementan los siguientes métodos:
     equals()
@@ -31,3 +31,26 @@
     toString()
     componentN(): component1(), component2(), etc.
     copy()
+
+## Singleton; Hay muchas situaciones en las que querrás que una clase tenga solo una instancia. Por ejemplo:
+
+    Estadísticas del jugador actual en un juego para dispositivos móviles
+    Interacciones con un solo dispositivo de hardware, como enviar audio a través de una bocina
+    Un objeto para acceder a una fuente de datos remota (como una base de datos de Firebase)
+    Autenticación, en función de la cual solo debe acceder un usuario a la vez
+
+Objeto Singleton
+En las situaciones anteriores, es probable que necesites usar una clase. Sin embargo, solo necesitarás una instancia 
+de esa clase. Si solo hay un dispositivo de hardware o si accedió solo un usuario a la vez, no habrá motivo para crear 
+más de una instancia. Tener dos objetos que acceden al mismo dispositivo de hardware de forma simultánea podría causar un comportamiento muy extraño y con errores.
+
+Puedes comunicar claramente en tu código que un objeto debe tener una sola instancia definiéndolo como un singleton. 
+Un singleton es una clase que solo puede tener una única instancia. Kotlin proporciona una construcción especial, llamada objeto, 
+que se puede usar para crear una clase singleton.
+
+### Ejemplo:
+
+object StudentProgress {
+var total: Int = 10
+var answered: Int = 3
+}
