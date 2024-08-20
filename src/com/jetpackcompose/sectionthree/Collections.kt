@@ -1,13 +1,17 @@
 package com.jetpackcompose.sectionthree
 
-class Collections {
+fun main() {
+    //arrayList()
+
+    mutableSet()
 
 }
 
-fun main() {
+private fun arrayList() {
     var rockPlanets = arrayOf<String>("Mercury", "Venus", "Earth", "Mars")
     var gasPlanets = arrayOf("Jupiter", "Saturn", "Uranus", "Neptune")
-
+    var arrayPlanet = rockPlanets + gasPlanets
+    println(arrayPlanet)
     val solarSystem = mutableListOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
 
     println(solarSystem.indexOf("Earth"))
@@ -15,14 +19,13 @@ fun main() {
 
     addElement(solarSystem)
     println()
-    for(list in solarSystem) {
+    for (list in solarSystem) {
         println(list)
     }
 
     removeListElement(solarSystem)
 
     printBooleanInList(solarSystem)
-
 }
 
 private fun addElement(solarSystem: MutableList<String>) {
@@ -45,4 +48,20 @@ private fun printBooleanInList(solarSystem: MutableList<String>) {
     println("Pluto" in solarSystem)
     println(solarSystem.contains("Theia"))
     println(solarSystem.contains("Earth"))
+}
+
+private fun mutableSet() {
+    val solarSystem = mutableSetOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
+    println(solarSystem.size)
+    solarSystem.add("Pluto")
+    println(solarSystem.size)
+    println(solarSystem.contains("Pluto"))
+    println("Pluto" in solarSystem)
+
+    //No se vuelve a agregar debido a que ya existe en el conjunto, el tamaño se mantiene
+    solarSystem.add("Pluto")
+    println(solarSystem.size)
+    solarSystem.remove("Pluto")
+    println("Tamaño: "+solarSystem.size+"\nConjunto: "+solarSystem)
+    println(solarSystem.contains("Pluto"))
 }
