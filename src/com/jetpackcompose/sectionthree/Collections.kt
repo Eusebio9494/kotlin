@@ -3,7 +3,9 @@ package com.jetpackcompose.sectionthree
 fun main() {
     //arrayList()
 
-    mutableSet()
+    //mutableSet()
+
+    mutableMap()
 
 }
 
@@ -64,4 +66,32 @@ private fun mutableSet() {
     solarSystem.remove("Pluto")
     println("Tamaño: "+solarSystem.size+"\nConjunto: "+solarSystem)
     println(solarSystem.contains("Pluto"))
+}
+
+private fun mutableMap() {
+    val solarSystem = mutableMapOf(
+        "Mercury" to 0,
+        "Venus" to 0,
+        "Earth" to 1,
+        "Mars" to 2,
+        "Jupiter" to 79,
+        "Saturn" to 82,
+        "Uranus" to 27,
+        "Neptune" to 14
+    )
+println("Tamaño: "+solarSystem.size)
+    println("Se añade Pluto ya que no existe en el mapa")
+    solarSystem["Pluto"] = 5
+    println("Tamaño: "+solarSystem.size)
+    println("Valor de Pluto: "+solarSystem["Pluto"])
+    println("Valor de Theia: "+solarSystem.get("Theia"))
+
+    println("método remove")
+    solarSystem.remove("Pluto")
+    println("Tamaño: "+solarSystem.size)
+
+    println("\nSe actualiza el valor existente de Jupiter")
+    //Modificar al valor de Jupiter
+    solarSystem["Jupiter"] = 78
+    println(solarSystem)
 }
