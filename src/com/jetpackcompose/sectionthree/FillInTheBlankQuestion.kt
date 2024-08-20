@@ -41,6 +41,25 @@ class Quiz : ProgressPrintable {
         var total: Int = 10
         var answered: Int = 3
     }
+
+    fun printQuiz() {
+        question1.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+        question2.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+        question3.let {
+            println(it.questionText)
+            println(it.answer)
+            println(it.difficulty)
+        }
+
+    }
 }
 
 
@@ -48,7 +67,12 @@ fun main() {
 
     //print("${Quiz.answered} of ${Quiz.total} answered")
     //println(Quiz.progressText)
-    Quiz().printProgressBar()
+    //Quiz().printProgressBar()
+
+    val quiz = Quiz().apply { //apply función de alcance
+
+        printQuiz()
+    }
 
 }
 

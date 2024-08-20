@@ -60,3 +60,9 @@ Objeto Complementario
 Las clases y los objetos de Kotlin se pueden definir dentro de otros tipos y pueden ser una excelente manera de organizar tu código. 
 Puedes definir un objeto singleton dentro de otra clase por medio de un objeto complementario. Un objeto complementario te permite acceder 
 a sus propiedades y métodos desde adentro de la clase, si las propiedades y los métodos del objeto pertenecen a esa clase, lo que permite una sintaxis más concisa.
+
+## Cómo llamar a los métodos de un objeto sin una variable mediante apply()
+
+Uno de los aspectos geniales de las funciones de alcance es que puedes llamarlas en un objeto incluso antes de que este se asigne a una variable. Por ejemplo, 
+la función apply() es una función de extensión a la que se puede llamar en un objeto con la notación de puntos. La función apply() también muestra una referencia a 
+ese objeto de modo que se pueda almacenar en una variable.
