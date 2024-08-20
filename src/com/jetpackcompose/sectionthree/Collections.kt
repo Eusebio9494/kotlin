@@ -8,9 +8,9 @@ fun main() {
 }
 
 private fun arrayList() {
-    var rockPlanets = arrayOf<String>("Mercury", "Venus", "Earth", "Mars")
-    var gasPlanets = arrayOf("Jupiter", "Saturn", "Uranus", "Neptune")
-    var arrayPlanet = rockPlanets + gasPlanets
+    val rockPlanets = arrayOf<String>("Mercury", "Venus", "Earth", "Mars")
+    val gasPlanets = arrayOf("Jupiter", "Saturn", "Uranus", "Neptune")
+    val arrayPlanet = rockPlanets + gasPlanets
     println(arrayPlanet)
     val solarSystem = mutableListOf("Mercury", "Venus", "Earth", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune")
 
