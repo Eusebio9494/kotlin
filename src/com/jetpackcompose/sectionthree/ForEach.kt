@@ -77,6 +77,25 @@ fun main() {
     }
 
 
+    println("GroupBy():\n")
+    val groupMenu = cookies.groupBy { it.softBaked }
+    val softBaked = groupMenu[true] ?: listOf()
+    val crackBaked = groupMenu[false] ?: listOf()
+    println("Soft Cookies\n")
+    softBaked.forEach {
+        println("${it.name} - ${it.price}")
+    }
+    println("Crunchy Cookies\n")
+    crackBaked.forEach {
+        println("${it.name} - ${it.price}")
+    }
+
+
+    println("Fold()\n")
+    val totalPrice = cookies.fold(0.0) {total, cookie ->
+        total + cookie.price
+    }
+    println("Total price: $${totalPrice}")
 
 
 }
